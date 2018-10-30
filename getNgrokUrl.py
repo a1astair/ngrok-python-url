@@ -1,14 +1,15 @@
 import json
 import os
+import sys
 from slackclient import SlackClient
 
+os.system('ngrok tcp 3389')
 slack_token = os.getenv("SLACK_API_TOKEN")
 username = "@abeaumont"
 if (slack_token is None):
     sys.exit(0)
 
 sc = SlackClient(slack_token)
-
 os.system("curl  http://localhost:4040/api/tunnels > tunnels.json")
 
 with open('tunnels.json') as data_file:
