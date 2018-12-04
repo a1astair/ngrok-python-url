@@ -4,7 +4,7 @@ import sys
 from slackclient import SlackClient
 
 slack_token = os.getenv("SLACK_API_TOKEN")
-username = "@abeaumont"
+username = "@Alastair"
 if (slack_token is None):
     sys.exit(0)
 
@@ -22,8 +22,7 @@ for i in datajson['tunnels']:
 
 sc.api_call(
     "chat.postMessage",
-    channel="CA3QZ4B6Z",
-    # user="U6DP58EH4",
+    channel="GEKTKV0UW",
     link_names=1,
     username="ngrok-url-bot",
     text=msg
