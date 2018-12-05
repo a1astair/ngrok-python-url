@@ -4,7 +4,8 @@ import sys
 from slackclient import SlackClient
 
 slack_token = os.getenv("SLACK_API_TOKEN")
-username = "@Alastair"
+# Grab your slack id from here https://joulebug.zendesk.com/hc/en-us/articles/115000273891-Finding-my-Slack-ID
+username = "<@UEJ2QUC2F>"
 if (slack_token is None):
     sys.exit(0)
 
@@ -23,7 +24,7 @@ for i in datajson['tunnels']:
 sc.api_call(
     "chat.postMessage",
     channel="GEKTKV0UW",
-    link_names=1,
+    link_names=True,
     username="ngrok-url-bot",
     text=msg
 )
